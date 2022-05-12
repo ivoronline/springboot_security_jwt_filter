@@ -24,7 +24,7 @@ public class JWTController {
   // CREATE JWT
   //==================================================================
   // http://localhost:8080/CreateJWT?username=myuser&password=myuserpassword
-  // eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6IltST0xFX0FETUlOLCBST0xFX1VTRVJdIiwidXNlcm5hbWUiOiJteXVzZXIifQ.MshnOBSYy6575qA2RBT4bisjIGmsuEUVNQtLnm-QSv8
+  // eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6IltST0xFX0FETUlOLCBST0xFX1ViOiJteXVzZXIifQ.MshnOBSYy65tLnm-QSv8
   @RequestMapping("CreateJWT")
   String createJWT(@RequestParam String username, @RequestParam String password) throws IOException {
 
@@ -44,7 +44,7 @@ public class JWTController {
   //==================================================================
   // GET CLAIMS
   //==================================================================
-  // http://localhost:8080/GetClaims?jwt=eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6IltST0xFX0FETUlOLCBST0xFX1VTRVJdIiwidXNlcm5hbWUiOiJteXVzZXIifQ.MshnOBSYy6575qA2RBT4bisjIGmsuEUVNQtLnm-QSv8
+  // http://localhost:8080/GetClaims?jwt=eyJhbGczI1NiJ9.eyJhdXRom5hbWUiOeXVzZXIifQ.MshnOBjIGmsuEUVNQtLnm-QSv8
   // authorization:Bearer <JWT>
   // {"authorities":"[ROLE_ADMIN, ROLE_USER]","username":"myuser"}
   @RequestMapping("GetClaims")
