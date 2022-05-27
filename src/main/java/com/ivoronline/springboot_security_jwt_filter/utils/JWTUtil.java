@@ -8,7 +8,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
-
 import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
 import java.io.IOException;
@@ -78,12 +77,17 @@ public class JWTUtil {
   // authorization:Bearer <JWT>
   public String getJWTFromAuthorizationHeader(String authorizationHeader) throws IOException {
 
+     System.out.println("getJWTFromAuthorizationHeader");
+
     //CHECK INPUT PARAMETERS
     if( authorizationHeader == null)               { throw new IOException("No Authorization Header"); }
     if(!authorizationHeader.startsWith("Bearer ")) { throw new IOException("No Bearer"              ); }
 
     //GET JWT
     String jwt = authorizationHeader.replace("Bearer ", ""); //Remove Bearer suffix
+
+    System.out.print("jwt = ");
+    System.out.println(jwt);
 
     //RETURN JWT
     return jwt;
